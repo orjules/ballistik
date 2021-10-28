@@ -24,5 +24,5 @@ pub fn write_to_file(name: &str, data: Vec<(f64, f64, f64, f64, f64)>){
         content.push_str(&format!("{:.3},{:.3},{:.3},{:.3},{:.3}\n",
                                   pos.0, pos.1, pos.2, pos.3, pos.4));
     }
-    fs::write(format!("{}", name), content).expect("Unable to write file");
+    fs::write(format!("../TextOutputs/{}", name), content).expect("Unable to write file");
 }

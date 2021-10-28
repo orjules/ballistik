@@ -1,10 +1,10 @@
-pub fn get_vec() -> Vec<(f64, f64, f64, f64, f64)>{
+pub fn get_list(position: (f64, f64), velocity: (f64, f64), delta_t: f64) -> Vec<(f64, f64, f64, f64, f64)>{
     // Set initial values
-    let mut rx = 0.0;
-    let mut ry = 0.0;
-    let mut vx = 100.0;
-    let mut vy = 100.0;
-    let mut dt = 0.8;
+    let mut rx = position.0;
+    let mut ry = position.1;
+    let mut vx = velocity.0;
+    let mut vy = velocity.1;
+    let mut dt = delta_t;
     let mut t = 0.0;
     let gx = 0.0;
     let gy = -9.81;

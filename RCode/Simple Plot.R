@@ -1,8 +1,12 @@
 # Daten für die folgenden Plots einholen
-points <- read.table("/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/code/Output.txt",
+here("TextOutputs", "v100100s1.txt")
+points <- read.table(here("TextOutputs", "v100100s1.txt"),
                      header = TRUE,
                      sep = ",",
                      dec = ".")
+
+# v100100s05
+# /Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik
 
 # Plot des Ortes in X und Y
 plot(x = 1,                 
