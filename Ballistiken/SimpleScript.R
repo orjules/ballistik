@@ -13,6 +13,11 @@ v80100s06 <- read.table("../TextOutputs/v80100s06.txt",
                      sep = ",",
                      dec = ".")
 
+v100100s1r1 <- read.table("../TextOutputs/v100100s1r1.txt",
+                         header = TRUE,
+                         sep = ",",
+                         dec = ".")
+
 # Plot des Ortes in X und Y
 plot(x = 1,                 
      xlab = "Weite", 
@@ -23,8 +28,8 @@ plot(x = 1,
      type = "n")
 
 points(v100100s1$Ort_x, v100100s1$Ort_y, col="blue")
-points(v100100s06$Ort_x, v100100s06$Ort_y, col="red")
-points(v80100s06$Ort_x, v80100s06$Ort_y, col="purple")
+# points(v100100s06$Ort_x, v100100s06$Ort_y, col="red")
+points(v100100s1r1$Ort_x, v100100s1r1$Ort_y, col="purple")
 
 # Plot der Geschwindigkeiten relativ zur Zeit
 plot(x = 1,                 
@@ -37,8 +42,8 @@ plot(x = 1,
 abline(h=0)
 points(v100100s1$Zeit, v100100s1$Geschw_x, col="blue")
 points(v100100s1$Zeit, v100100s1$Geschw_y, col="blue")
-points(v100100s06$Zeit, v100100s06$Geschw_x, col="red")
-points(v100100s06$Zeit, v100100s06$Geschw_y, col="red")
-points(v80100s06$Zeit, v80100s06$Geschw_x, col="purple")
-points(v80100s06$Zeit, v80100s06$Geschw_y, col="purple")
+# points(v100100s06$Zeit, v100100s06$Geschw_x, col="red")
+# points(v100100s06$Zeit, v100100s06$Geschw_y, col="red")
+points(v100100s1r1$Zeit, v100100s1r1$Geschw_x, col="purple")
+points(v100100s1r1$Zeit, v100100s1r1$Geschw_y, col="purple")
 

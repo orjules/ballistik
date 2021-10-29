@@ -59,8 +59,9 @@ Außerdem ist der es ein Mehraufwand in der Hardware ohne viel theoretische Komp
 
 Mit dem Ansatz von Stokes müssen folgende Änderungen vorgenommen werden.
 - Bei der Änderung des Geschwindigkeit muss die Reibungsfomel einbezogen werden
-- Formel: F = 6 * pi * Radius Körper * dynamische Viskosität * Geschwindigkeit
+- Formel: F = 6 * pi * Radius Körper * dynamische Viskosität * Geschwindigkeit 
 - Dabei werden F_x und F_y separat berechnet und von der aktuellen Geschwindigkeit abgezogen (entgegen)
+- Der Radius wird als Kugelförmig angenommen
 - Die Viskosität von Luft ist: 18,215 mikro Pascal * Sekunde bzw kg / (m * s) - zumindest bei 20 Grad Celsius
 - Die Geschwindigkeit ist ja schon im Algorithmus drin
 
@@ -69,9 +70,11 @@ Quelle für die Viskosiät: https://stoffdaten-online.de/fluide/luft/
 Pseudocode:
 ```
 r_neu = ... (wie bisher)
-v_x_neu = v_x_alt + (g_x - 6 * 3.142 * 18.215 * v_x_alt) * dt;
-v_y_neu = v_y_alt + (g_y - 6 * 3.142 * 18.215 * v_y_alt) * dt;
+v_x_neu = v_x_alt + (g_x - 6 * 3.142 * Radius * 18.215 * 0.000001 * v_x_alt) * dt;
+v_y_neu = v_y_alt + (g_y - 6 * 3.142 * Radius * 18.215 * 0.000001 * v_y_alt) * dt;
 ```
+
+Die 0.000001 sind nötig um die mikro (10^-6) Pascal * sekunde korrekt darzustellen. 
 
 Das werde ich nun erstmal implementieren.
 Wenn man noch einen Schritt weiter gehen wöllte, könnte man die Viskosität der Luft von der 
