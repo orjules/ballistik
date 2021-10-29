@@ -7,7 +7,7 @@ scatterplot3d(v111s1$Ort_x, v111s1$Ort_y, v111s1$Ort_z,
               xlab = "X", ylab = "Y", zlab = "Z",
               main = "3D Wurf")
 
-plot3d(v111s1$Ort_x, v111s1$Ort_y, v111s1$Ort_z, 
+plot3d(v111s1$Ort_x,v111s1$Ort_y, v111s1$Ort_z, 
        col = "blue",
        xlab = "X",
        ylab = "Y",
@@ -15,6 +15,6 @@ plot3d(v111s1$Ort_x, v111s1$Ort_y, v111s1$Ort_z,
        )
 rglwidget() 
 
-scatter3D(v111s1$Ort_x, v111s1$Ort_y, v111s1$Ort_z, labels("X", "Y", "Z"))
+librascatter3D(v111s1$Ort_x, v111s1$Ort_y, v111s1$Ort_z, labels("X", "Y", "Z"))
 
 # Erkenntnis: 3d ist interaktiv gut aber im PDF schwierig
