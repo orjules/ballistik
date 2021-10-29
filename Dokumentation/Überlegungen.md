@@ -74,8 +74,17 @@ v_x_neu = v_x_alt + (g_x - 6 * 3.142 * Radius * 18.215 * 0.000001 * v_x_alt) * d
 v_y_neu = v_y_alt + (g_y - 6 * 3.142 * Radius * 18.215 * 0.000001 * v_y_alt) * dt;
 ```
 
-Die 0.000001 sind nötig um die mikro (10^-6) Pascal * sekunde korrekt darzustellen. 
+Die 0.000001 sind nötig um die mikro (10^-6) Pascal * sekunde korrekt darzustellen.
 
-Das werde ich nun erstmal implementieren.
-Wenn man noch einen Schritt weiter gehen wöllte, könnte man die Viskosität der Luft von der 
+Die Graphen von der Implementierung zeigen, dass mit mehr Initialgeschwindigkeit mehr Reibungsverlust entsteht.
+
+![](/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/Ballistiken/PlotExports/Ortsänderung mit 100.png)
+![](/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/Ballistiken/PlotExports/Ortsänderung mit 1000.png)
+
+Die Geschwindikeiten über die Zeit zeigen eine interessante Abweichung von Y.
+
+![](/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/Ballistiken/PlotExports/Geschwindigkeitsänderung mit 100.png)
+![](/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/Ballistiken/PlotExports/Geschwindigkeitsänderung mit 1000.png)
+
+Wenn man noch einen Schritt weiter gehen wöllte, könnte man die Viskosität der Luft von der
 Temperatur und der Höhe abhängig machen.
