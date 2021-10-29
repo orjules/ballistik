@@ -4,8 +4,8 @@ pub fn get_list(position: (f64, f64), velocity: (f64, f64), delta_t: f64) -> Vec
     let mut ry = position.1;
     let mut vx = velocity.0;
     let mut vy = velocity.1;
-    let mut dt = delta_t;
     let mut t = 0.0;
+    let dt = delta_t;
     let gx = 0.0;
     let gy = -9.81;
 

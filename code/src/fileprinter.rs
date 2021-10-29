@@ -1,14 +1,6 @@
-use std::fmt;
 use std::fs;
 
-pub fn print_rounded(descriptor: &str, result: Vec<(f64, f64, f64, f64, f64)>){
-    println!("{}", descriptor);
-    for i in result {
-        println!("Ort_x, Ort_y, Geschw_x, Geschw_y, Zeit");
-        println!(" {} , {} , {} , {} , {} ", i.0 as i32, i.1 as i32, i.2 as i32, i.3 as i32, i.4 as i32);
-    }
-}
-
+#[allow(dead_code)]
 pub fn print_exact(descriptor: &str, result: Vec<(f64, f64, f64, f64, f64)>){
     println!("{}", descriptor);
     println!("Ort_x, Ort_y, Geschw_x, Geschw_y, Zeit");

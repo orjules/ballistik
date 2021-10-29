@@ -1,6 +1,6 @@
+/// The return values are pos_x, pos_y, pos_z and time
+/// Here x and y are a plane with z being up and down
 pub fn get_3d_pos_list(position: (f64, f64, f64), velocity: (f64, f64, f64), delta_t: f64) -> Vec<(f64, f64, f64, f64)>{
-    /// The return values are pos_x, pos_y, pos_z and time
-    /// Here x and y are a plane with z being up and down
     // Set initial values
     let mut rx = position.0;
     let mut ry = position.1;
@@ -8,8 +8,8 @@ pub fn get_3d_pos_list(position: (f64, f64, f64), velocity: (f64, f64, f64), del
     let mut vx = velocity.0;
     let mut vy = velocity.1;
     let mut vz = velocity.2;
-    let mut dt = delta_t;
     let mut t = 0.0;
+    let dt = delta_t;
     let gx = 0.0;
     let gy = 0.0;
     let gz = -9.81;
