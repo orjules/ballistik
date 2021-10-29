@@ -88,3 +88,20 @@ Die Geschwindikeiten über die Zeit zeigen eine interessante Abweichung von Y.
 
 Wenn man noch einen Schritt weiter gehen wöllte, könnte man die Viskosität der Luft von der
 Temperatur und der Höhe abhängig machen.
+
+
+## Orbital Experiment
+
+Weil ich mich eigentlich mehr für Raumfahrt als für Artillerie Geschütze interessiere, wollte ich mich
+an Orbitalmechanik mit dem selben Algorithmus versuchen.
+Dabei fällt die Reibung natürlich weg aber g ist nicht mehr konstant sondern Ortsabhängig.
+Anfangen will ich mit zwei Objekten die umeinander kreisen, wirklich interessant wird es aber erst mit drei 
+Objekten, weil dieses Problem sogar nur numerisch lösbar ist und damit genau der Anwendungsfall für diesen Algorithmus.
+
+
+## Optimierung mit Heun
+
+Momentan verwende ich für alle diese Probleme den selben Algorithmus von Euler. Dieser ist aber wird aber nur linear 
+besser, was für kleine Schrittweiten eine lange Rechendauer bedeutet.
+
+Besser wäre etwas wie das Heun-Verfahren, welches quadratisch besser wird.
