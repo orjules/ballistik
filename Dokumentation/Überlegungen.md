@@ -3,7 +3,7 @@
 
 ## Initiale Überlegungen
 
-Das gewählte Thema fällt unter die numerische Lösen von Differentialgleichungen.
+Das gewählte Thema fällt unter das numerische Lösen von Differenzialgleichungen.
 Mein erster Ansatz war nun aber eine Überlegung mit Vektoren in der komplexen Ebene.
 Der Bezug in der Wirklichkeit sollte ein Artilleriegeschütz sein, welches mit einem Winkel eingestellt wird 
 und dessen Mündungsgeschwindigkeit bekannt wäre.
@@ -12,8 +12,8 @@ Das erwies sich als zu schwierig, weil für die Umrechnung von Vektoren in Polar
 Cosinus Funktionen nötig sind. Außerdem gefiel mir die Waffenanalogie nicht, auch wenn die moderne Computertechnik 
 dort ihren Anfang genommen hatte.
 
-Somit habe ich mich zurückbesonnen auf die eigentlich zentrale Differentialgleichung die gelöst werden soll.
-Ausgehend von Newtons F=m*a wobei a die doppelte Ableitung des Ortes nach der Zeit ist, habe ich mich daran gemacht 
+Somit habe ich mich zurückbesonnen auf die eigentlich zentrale Differenzialgleichung die gelöst werden soll.
+Ausgehend von Newtons F=m∗a wobei a die doppelte Ableitung des Ortes nach der Zeit ist, habe ich mich daran gemacht 
 diese erstmal von Hand zu lösen. Mit dem Ergebnis von einem gegebenen:
 
 ```
@@ -21,7 +21,7 @@ dr(t)/dt = g * t + v_0
 r(t) = 1/2 * g * t^2 + v_0 * t +r_0
 ```
 
-Bei der Umsetzung ins numerische habe ich mich aber andauernd r und v durcheinander gebracht, was zwar zu 
+Bei der Umsetzung ins Numerische habe ich mich aber andauernd r und v durcheinander gebracht, was zwar zu 
 Parabeln geführt hat aber eine Änderung der Ausgangswerte haben unsinnige Kurven ergeben.
 
 
@@ -29,7 +29,7 @@ Parabeln geführt hat aber eine Änderung der Ausgangswerte haben unsinnige Kurv
 
 Hilfe fand ich in diesem YouTube Video: https://www.youtube.com/watch?v=IaR1c9_AhKI
 
-Darin fand ich auch Pseudocode, der mir half einen Algorithmus nach dem expliziten Eulerverfahren in Rust zu schreiben.
+Darin fand ich auch Pseudocode, der mir half einen Algorithmus nach dem expliziten Euler-Verfahren in Rust zu schreiben.
 Die Grundidee ist:
 
 Gegeben:
@@ -58,14 +58,14 @@ Außerdem ist der es ein Mehraufwand in der Hardware ohne viel theoretische Komp
 ## Reibung
 
 Mit dem Ansatz von Stokes müssen folgende Änderungen vorgenommen werden.
-- Bei der Änderung des Geschwindigkeit muss die Reibungsfomel einbezogen werden
+- Bei der Änderung der Geschwindigkeit muss die Reibungsformel einbezogen werden
 - Formel: F = 6 * pi * Radius Körper * dynamische Viskosität * Geschwindigkeit 
 - Dabei werden F_x und F_y separat berechnet und von der aktuellen Geschwindigkeit abgezogen (entgegen)
 - Der Radius wird als Kugelförmig angenommen
-- Die Viskosität von Luft ist: 18,215 mikro Pascal * Sekunde bzw kg / (m * s) - zumindest bei 20 Grad Celsius
+- Die Viskosität von Luft ist: 18,215 micro Pascal * Sekunde bzw kg / (m ∗ s) - zumindest bei 20 Grad Celsius
 - Die Geschwindigkeit ist ja schon im Algorithmus drin
 
-Quelle für die Viskosiät: https://stoffdaten-online.de/fluide/luft/
+Quelle für die Viskosität: https://stoffdaten-online.de/fluide/luft/
 
 Pseudocode:
 ```
@@ -74,17 +74,17 @@ v_x_neu = v_x_alt + (g_x - 6 * 3.142 * Radius * 18.215 * 0.000001 * v_x_alt) * d
 v_y_neu = v_y_alt + (g_y - 6 * 3.142 * Radius * 18.215 * 0.000001 * v_y_alt) * dt;
 ```
 
-Die 0.000001 sind nötig um die mikro (10^-6) Pascal * sekunde korrekt darzustellen.
+Die 0.000001 sind nötig um die micro (10^-6) Pascal * Sekunde korrekt darzustellen.
 
 Die Graphen von der Implementierung zeigen, dass mit mehr Initialgeschwindigkeit mehr Reibungsverlust entsteht.
 
-![](/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/Ballistiken/PlotExports/Ortsänderung mit 100.png)
-![](/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/Ballistiken/PlotExports/Ortsänderung mit 1000.png)
+![](../Ballistiken/PlotExports/Ortsänderung mit 100.png)
+![](../Ballistiken/PlotExports/Ortsänderung mit 1000.png)
 
-Die Geschwindikeiten über die Zeit zeigen eine interessante Abweichung von Y.
+Die Geschwindigkeiten über die Zeit zeigen eine interessante Abweichung von Y.
 
-![](/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/Ballistiken/PlotExports/Geschwindigkeitsänderung mit 100.png)
-![](/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/Ballistiken/PlotExports/Geschwindigkeitsänderung mit 1000.png)
+![](../Ballistiken/PlotExports/Geschwindigkeitsänderung mit 100.png)
+![](../Ballistiken/PlotExports/Geschwindigkeitsänderung mit 1000.png)
 
 Wenn man noch einen Schritt weiter gehen wöllte, könnte man die Viskosität der Luft von der
 Temperatur und der Höhe abhängig machen.
@@ -93,8 +93,8 @@ Temperatur und der Höhe abhängig machen.
 ## Orbital Experiment
 
 Weil ich mich eigentlich mehr für Raumfahrt als für Artillerie Geschütze interessiere, wollte ich mich
-an Orbitalmechanik mit dem selben Algorithmus versuchen.
-Dabei fällt die Reibung natürlich weg aber g ist nicht mehr konstant sondern Ortsabhängig.
+an Orbitalmechanik mit demselben Algorithmus versuchen.
+Dabei fällt die Reibung natürlich weg aber g ist nicht mehr konstant, sondern Ortsabhängig.
 Anfangen will ich mit zwei Objekten die umeinander kreisen, wirklich interessant wird es aber erst mit drei 
 Objekten, weil dieses Problem sogar nur numerisch lösbar ist und damit genau der Anwendungsfall für diesen Algorithmus.
 
@@ -105,8 +105,8 @@ Dieses Problem ist mir aufgefallen beim Test mit dem Mond um die Erde.
 ![](../Ballistiken/PlotExports/MondUmDieErde.png)
 
 Mein erster Gedanke war, dass der Masse unterschied zu klein sein könnte, weswegen ich es mit der Erde und der
-Sonne nocheinmal versucht habe aber mit dem selben Problem.
-Auf dem ersten Bild kann man es wegen der Entfernungen nicht so gut erkennen, aber die Sonne hat den selben Drift. 
+Sonne noch einmal versucht habe aber mit demselben Problem.
+Auf dem ersten Bild kann man es wegen der Entfernungen nicht so gut erkennen, aber die Sonne hat denselben Drift. 
 
 ![](../Ballistiken/PlotExports/ErdeUmDieSonne.png)
 ![](../Ballistiken/PlotExports/NurDieSonne.png)
@@ -116,7 +116,7 @@ immer näher.
 
 ## Optimierung mit Heun
 
-Momentan verwende ich für alle diese Probleme den selben Algorithmus von Euler. Dieser ist aber wird aber nur linear 
+Momentan verwende ich für alle diese Probleme denselben Algorithmus von Euler. Dieser ist aber wird aber nur linear 
 besser, was für kleine Schrittweiten eine lange Rechendauer bedeutet.
 
 Optimal wäre etwas wie das Heun-Verfahren, welches quadratisch besser wird, ohne viel komplizierter in der 
