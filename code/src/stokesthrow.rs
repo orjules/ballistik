@@ -1,7 +1,7 @@
 const PI: f64 = 3.142;
 const VISC: f64 = 18.215;
 
-
+// Radius in meter
 pub fn get_stokes_list(position: (f64, f64), velocity: (f64, f64), radius: f64, delta_t: f64)
     -> Vec<(f64, f64, f64, f64, f64)>{
     // Set initial values

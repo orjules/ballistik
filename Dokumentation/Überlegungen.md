@@ -128,3 +128,11 @@ Heunverfahren annährt, während dieses sich kaum verändert.
 ![](../Ballistiken/PlotExports/HeunVsEuler.png)
 
 Nun das gleiche noch mit Stokes Reibung.
+
+Hier hat sich aber das Problem ergeben, dass die Kurve mit kleineren Schritten nicht sichtlich genauer wird. 
+
+![](../Ballistiken/PlotExports/Heun%20mit%20Reibung.png)
+
+Als nächstes:
+- Heun mit und ohne Reibung vergleichen
+- Heun mit Schrittunterschied von Faktor 10 anzeigen (um zu prüfen ob der Algorithmus evtl falsch implementiert ist)  

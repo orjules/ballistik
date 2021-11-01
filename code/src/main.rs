@@ -76,5 +76,10 @@ fn test_simple_heun(){
 
 #[allow(dead_code)]
 fn test_heun_stokes(){
-
+    let list = heunstokesthrow::get_list((0.0,0.0), (100.0,100.0), 1.0, 1.0);
+    fileprinter::write_to_file("heunstokes1.txt", list);
+    let list2 = heunstokesthrow::get_list((0.0,0.0), (100.0,100.0), 1.0, 0.5);
+    fileprinter::write_to_file("heunstokes05.txt", list2);
+    let list3 = heunstokesthrow::get_list((0.0,0.0), (100.0,100.0), 1.0, 2.0);
+    fileprinter::write_to_file("heunstokes2.txt", list3);
 }
