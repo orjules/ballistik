@@ -4,13 +4,15 @@ mod throw3d;
 mod stokesthrow;
 mod orbit2bodies;
 mod simpleheun;
+mod heunstokesthrow;
 
 fn main() {
     // initial_tests();
     // test_3d();
     // test_stokes();
     // test_orbit_2_bodies();
-    test_simple_heun();
+    // test_simple_heun();
+    test_heun_stokes();
 }
 
 #[allow(dead_code)]
@@ -61,5 +63,18 @@ fn test_orbit_2_bodies(){
 
 #[allow(dead_code)]
 fn test_simple_heun(){
+    // Vergleich Heun und Euler
     let list = simpleheun::get_list((0.0, 0.0), (100.0, 100.0), 1.0);
+    fileprinter::write_to_file("heun.txt", list);
+    let data = simplethrow::get_list((0.0, 0.0), (100.0, 100.0), 1.0);
+    fileprinter::write_to_file("euler.txt", data);
+    let list2 = simpleheun::get_list((0.0, 0.0), (100.0, 100.0), 0.5);
+    fileprinter::write_to_file("heun05.txt", list2);
+    let data2 = simplethrow::get_list((0.0, 0.0), (100.0, 100.0), 0.5);
+    fileprinter::write_to_file("euler05.txt", data2);
+}
+
+#[allow(dead_code)]
+fn test_heun_stokes(){
+
 }

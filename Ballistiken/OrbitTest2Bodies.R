@@ -17,14 +17,3 @@ abline(v=0)
 points(Monat$Erde_x, Monat$Erde_y, col="blue")
 points(Monat$Mond_x, Monat$Mond_y, col="red")
 
-
-plot(x = 1,                 
-     xlab = "X in m", 
-     ylab = "Y in m",
-     xlim = c(-50000000, 50000000), 
-     ylim = c(-50000000, 50000000),
-     main = "Orbit vom Mond um die Erde",
-     type = "n")
-abline(h=0)
-abline(v=0)
-points(Monat$Erde_x, Monat$Erde_y, col="blue")

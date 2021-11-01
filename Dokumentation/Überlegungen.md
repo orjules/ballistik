@@ -121,3 +121,10 @@ besser, was für kleine Schrittweiten eine lange Rechendauer bedeutet.
 
 Optimal wäre etwas wie das Heun-Verfahren, welches quadratisch besser wird, ohne viel komplizierter in der 
 Implementierung zu sein.
+
+Nach der Implementierung kann ich die Genauigkeit nur insoweit zeigen, dass sich das Eulerverfahren an das 
+Heunverfahren annährt, während dieses sich kaum verändert.
+
+![](../Ballistiken/PlotExports/HeunVsEuler.png)
+
+Nun das gleiche noch mit Stokes Reibung.
