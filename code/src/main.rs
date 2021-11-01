@@ -3,12 +3,14 @@ mod fileprinter;
 mod throw3d;
 mod stokesthrow;
 mod orbit2bodies;
+mod simpleheun;
 
 fn main() {
     // initial_tests();
     // test_3d();
     // test_stokes();
-    test_orbit_2_bodies();
+    // test_orbit_2_bodies();
+    test_simple_heun();
 }
 
 #[allow(dead_code)]
@@ -41,16 +43,7 @@ fn test_stokes(){
 
 #[allow(dead_code)]
 fn test_orbit_2_bodies(){
-    // 5,9722 · 10^24 kg
-    // 384400000 m => ca 1023 m/s
-    // oder 384400 km => ca. 1,022 km/s
-    // 1.082
-
-    // Masse Mond: 7,346 · 10^22 kg, Masse Erde: 5,9724 · 10^24 kg
-
-    // Mittelwerte: Semimajor axis (106 km)	0.3844, Mean orbital velocity (km/s)	1.022
-    // Nächste: Perigee (106 km)*0.3633, Max. orbital velocity (km/s)	1.082
-    // Weiteste: Apogee (106 km)*	0.4055, Min. orbital velocity (km/s)	0.970
+    // Versuch mit Erde und Mond
     let list = orbit2bodies::get_orbit_2_bodies_2d(5972400000000000000000000.0,
                                                    (0.0, 0.0), (0.0, 0.0),
                                                    73460000000000000000000.0,
@@ -64,4 +57,9 @@ fn test_orbit_2_bodies(){
                                                    (0.0, 0.0), (0.0, 0.0,),
                                                    1000.0, 31536);
     fileprinter::write_to_orbit_2d_file("Jahr", "Erde", "Sonne", list2);
+}
+
+#[allow(dead_code)]
+fn test_simple_heun(){
+    let list = simpleheun::get_list((0.0, 0.0), (100.0, 100.0), 1.0);
 }
