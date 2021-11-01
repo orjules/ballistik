@@ -98,10 +98,26 @@ Dabei fällt die Reibung natürlich weg aber g ist nicht mehr konstant sondern O
 Anfangen will ich mit zwei Objekten die umeinander kreisen, wirklich interessant wird es aber erst mit drei 
 Objekten, weil dieses Problem sogar nur numerisch lösbar ist und damit genau der Anwendungsfall für diesen Algorithmus.
 
+Der Algorithmus für die Orbitberechnung mit zwei Objekten funktioniert nur fast. Es gibt ein seltsames Problem, bei 
+dem der größere, zentrale Körper einen Drift in die Anfangsrichtung des kleineren Körpers bekommt.
+Dieses Problem ist mir aufgefallen beim Test mit dem Mond um die Erde.
+
+![](../Ballistiken/PlotExports/MondUmDieErde.png)
+
+Mein erster Gedanke war, dass der Masse unterschied zu klein sein könnte, weswegen ich es mit der Erde und der
+Sonne nocheinmal versucht habe aber mit dem selben Problem.
+Auf dem ersten Bild kann man es wegen der Entfernungen nicht so gut erkennen, aber die Sonne hat den selben Drift. 
+
+![](../Ballistiken/PlotExports/ErdeUmDieSonne.png)
+![](../Ballistiken/PlotExports/NurDieSonne.png)
+
+Die Erklärung für diesen Fehler kann eigentlich nur im Algorithmus liegen aber die Deadline für die Abgabe kommt 
+immer näher.
 
 ## Optimierung mit Heun
 
 Momentan verwende ich für alle diese Probleme den selben Algorithmus von Euler. Dieser ist aber wird aber nur linear 
 besser, was für kleine Schrittweiten eine lange Rechendauer bedeutet.
 
-Besser wäre etwas wie das Heun-Verfahren, welches quadratisch besser wird.
+Optimal wäre etwas wie das Heun-Verfahren, welches quadratisch besser wird, ohne viel komplizierter in der 
+Implementierung zu sein.

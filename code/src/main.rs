@@ -57,6 +57,11 @@ fn test_orbit_2_bodies(){
                                                    (384400000.0, 0.0), (0.0, 1022.0,),
                                                    1000.0, 2390);
     fileprinter::write_to_orbit_2d_file("Monat", "Erde", "Mond", list);
-    // Versuch mit kleineren Objekten
-    //let list = orbit2bodies::get_orbit_2_bodies_2d()
+    // Versuch mit Erde und Sonne
+    let list2 = orbit2bodies::get_orbit_2_bodies_2d(5972400000000000000000000.0,
+                                                   (147100000000.0, 0.0), (0.0, 30290.0),
+                                                   1988400000000000000000000000000.0,
+                                                   (0.0, 0.0), (0.0, 0.0,),
+                                                   1000.0, 31536);
+    fileprinter::write_to_orbit_2d_file("Jahr", "Erde", "Sonne", list2);
 }
