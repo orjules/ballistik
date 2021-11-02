@@ -12,7 +12,8 @@ fn main() {
     // test_stokes();
     // test_orbit_2_bodies();
     // test_simple_heun();
-    test_heun_stokes();
+    // test_heun_stokes();
+    test_heun_ohne_stokes();
 }
 
 #[allow(dead_code)]
@@ -82,4 +83,21 @@ fn test_heun_stokes(){
     fileprinter::write_to_file("heunstokes05.txt", list2);
     let list3 = heunstokesthrow::get_list((0.0,0.0), (100.0,100.0), 1.0, 2.0);
     fileprinter::write_to_file("heunstokes2.txt", list3);
+
+    let list = heunstokesthrow::get_list((0.0,0.0), (2000.0,2000.0), 1.0, 0.1);
+    fileprinter::write_to_file("heunstokes01.txt", list);
+    let list2 = heunstokesthrow::get_list((0.0,0.0), (2000.0,2000.0), 1.0, 1.0);
+    fileprinter::write_to_file("heunstokes1.txt", list2);
+    let list3 = heunstokesthrow::get_list((0.0,0.0), (2000.0,2000.0), 1.0, 10.0);
+    fileprinter::write_to_file("heunstokes10.txt", list3);
+    let list3 = heunstokesthrow::get_list((0.0,0.0), (2000.0,2000.0), 1.0, 100.0);
+    fileprinter::write_to_file("heunstokes100.txt", list3);
+}
+
+#[allow(dead_code)]
+fn test_heun_ohne_stokes(){
+    let list = heunstokesthrow::get_list((0.0,0.0), (1000.0,1000.0), 1.0, 5.0);
+    fileprinter::write_to_file("heunUndStokes.txt", list);
+    let list = simpleheun::get_list((0.0, 0.0), (1000.0, 1000.0), 5.0);
+    fileprinter::write_to_file("nurHeun.txt", list);
 }

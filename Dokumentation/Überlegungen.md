@@ -133,6 +133,10 @@ Hier hat sich aber das Problem ergeben, dass die Kurve mit kleineren Schritten n
 
 ![](../Ballistiken/PlotExports/Heun%20mit%20Reibung.png)
 
-Als nächstes:
-- Heun mit und ohne Reibung vergleichen
-- Heun mit Schrittunterschied von Faktor 10 anzeigen (um zu prüfen ob der Algorithmus evtl falsch implementiert ist)  
+Hier mit jeweils Faktor 10 wird es schnell so genau, dass es kaum erkennbar wird.
+
+![](../Ballistiken/PlotExports/HeunMitReibungMehr.png)
+
+Zum Schluss noch ein Test für Heun einmal mit und einmal ohne Reibung.
+
+![](../Ballistiken/PlotExports/HeunMitUndOhneReibung.png)
