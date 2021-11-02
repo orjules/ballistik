@@ -18,7 +18,7 @@ pub fn get_orbit_2_bodies_2d(mass_1: f64, pos_1: (f64, f64), vel_1: (f64, f64),
 
     let mut list = vec![(r_1_x, r_1_y, v_1_x, v_1_y, r_2_x, r_2_y, v_2_x, v_2_y, time)];
 
-    for number in 0..step_count {
+    for _number in 0..step_count {
         // Ort neu berechnen
         let r_1_x_new = r_1_x + v_1_x * d_t;
         let r_1_y_new = r_1_y + v_1_y * d_t;
