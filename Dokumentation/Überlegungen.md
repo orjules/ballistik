@@ -127,7 +127,7 @@ Heunverfahren annährt, während dieses sich kaum verändert.
 
 ![](../Ballistiken/PlotExports/HeunVsEuler.png)
 
-Nun das gleiche noch mit Stokes Reibung.
+Nun das gleiche noch mit Stokes Reibung in heunstokesthrow.rs.
 
 Hier hat sich aber das Problem ergeben, dass die Kurve mit kleineren Schritten nicht sichtlich genauer wird. 
 
@@ -140,3 +140,16 @@ Hier mit jeweils Faktor 10 wird es schnell so genau, dass es kaum erkennbar wird
 Zum Schluss noch ein Test für Heun einmal mit und einmal ohne Reibung.
 
 ![](../Ballistiken/PlotExports/HeunMitUndOhneReibung.png)
+
+Anschließend ist mir noch ein Fehler mit den Einheiten bei der Reibungsberechnung aufgefallen.
+Dieser entstand, weil die Formel von Stokes eine Kraft definiert und nicht eine Beschleunigung.
+Für Massen von einem Kilogram macht das keinen Unterschied aber natürlich muss für die Korrektheit noch 
+durch die Masse des Objektes geteilt werden. Somit haben schwerere Massen mehr Trägheit und fliegen weiter.
+
+![](../Ballistiken/PlotExports/HeunStokesMassen.png)
+
+Falls ich die Zeit noch finde, würde ich gern:
+- Die Orbitberechnungen verbessern
+- Die Ballistik- und Orbitberechnungen kombinieren um eine "Rakete" mit kontinuierlichen Antrieb in den Orbit zu bringen
+- Die Viskosität der Luft und somit die Reibung Höhenabhängig machen
+- Ein Optimierungsverfahren für eine Trajektorie mit möglichst geringen Treibstoffverbrauch zu einem bestimmten Orbit 
