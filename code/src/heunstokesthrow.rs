@@ -24,7 +24,6 @@ pub fn get_list(position: (f64, f64), velocity: (f64, f64), radius: f64, delta_t
     let mut vec = vec![(rx, ry, vx, vy, t)];
     loop {
         // Calculate next velocity with gravity and stokes formula
-        // 0.000001 because VISC is given in micro pascal * second
         let next_vx = vx + (gx - 6.0 * PI * radius * VISC * vx / mass) * dt;
         let next_vy = vy + (gy - 6.0 * PI * radius * VISC * vy / mass) * dt;
         // Calculate next position with median of the speeds
