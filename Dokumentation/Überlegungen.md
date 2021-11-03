@@ -123,7 +123,7 @@ Optimal wäre etwas wie das Heun-Verfahren, welches quadratisch besser wird, ohn
 Implementierung zu sein.
 
 Nach der Implementierung kann ich die Genauigkeit nur insoweit zeigen, dass sich das Eulerverfahren an das 
-Heunverfahren annährt, während dieses sich kaum verändert.
+Heunverfahren annähert, während dieses sich kaum verändert.
 
 ![](../Ballistiken/PlotExports/HeunVsEuler.png)
 
@@ -150,6 +150,6 @@ durch die Masse des Objektes geteilt werden. Somit haben schwerere Massen mehr T
 
 Falls ich die Zeit noch finde, würde ich gern:
 - Die Orbitberechnungen verbessern
-- Die Ballistik- und Orbitberechnungen kombinieren um eine "Rakete" mit kontinuierlichen Antrieb in den Orbit zu bringen
+- Die Ballistik- und Orbitberechnungen kombinieren um eine "Rakete" mit kontinuierlichem Antrieb in den Orbit zu bringen
 - Die Viskosität der Luft und somit die Reibung Höhenabhängig machen
 - Ein Optimierungsverfahren für eine Trajektorie mit möglichst geringen Treibstoffverbrauch zu einem bestimmten Orbit 
