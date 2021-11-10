@@ -21,11 +21,13 @@ pub fn no_negatives(pos_x: u32, pos_y: u32, vel_x: u32, vel_y: u32, radius: u32,
     let mut vx = vel_x;
     let mut vy = vel_y;
     // Konstanten für diesen Durchlauf berechnen
-    let vel_const_1 = mult(STOKES_FACTOR, radius);
+    println!("{}", STOKES_FACTOR);
+    println!("{}", radius);
+    let vel_const_1 = mul(STOKES_FACTOR, radius);
     println!("{}", vel_const_1);
-    let vel_const_2 = mult(vel_const_1, delta_t);
+    let vel_const_2 = mul(vel_const_1, delta_t);
     println!("{}", vel_const_2);
-    let vel_const_3 = vel_const_2 / mass; // TODO Diff implementieren
+    let vel_const_3 = vel_const_2 / mass;
     println!("{}", vel_const_3);
     let vel_const_4 = my_shift(vel_const_3, 1); // halbiert
     println!("{}", vel_const_4);
@@ -110,9 +112,11 @@ fn add_sub(num1: u32, num2: u32, sub_flag: u8) -> (u32, u8, u8, u8, u8){
     return (result, zero_flag, carry_flag, overflow_flag, negativ_flag);
 }
 
-fn mult(num1: u32, num2: u32) -> u32{
+fn mul(num1: u32, num2: u32) -> u32{
     let big_result = num1 as u64 * num2 as u64;
-    let small_result = big_result / 4294967296; // bzw * 2^-32
+    println!("big: {}", big_result);
+    let small_result = big_result >> 16; // 4294967296; // bzw * 2^-32
+    println!("small: {}", small_result);
     return small_result as u32;
 }
 

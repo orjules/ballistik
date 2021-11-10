@@ -6,6 +6,7 @@ mod orbit2bodies;
 mod simpleheun;
 mod heunstokesthrow;
 mod optimizedheunstokes;
+mod fixedpoint;
 
 fn main() {
     // initial_tests();
@@ -16,7 +17,8 @@ fn main() {
     // test_heun_stokes();
     // test_heun_ohne_stokes();
     // test_heun_stokes_massen();
-    test_optimized();
+    // test_optimized();
+    fixedpoint::test_alu();
 }
 
 fn test_optimized(){
