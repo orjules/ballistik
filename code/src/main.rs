@@ -1,5 +1,3 @@
-use crate::optimizedheunstokes::{add_sub, mult, my_shift, scale};
-
 mod simplethrow;
 mod fileprinter;
 mod throw3d;
@@ -18,28 +16,21 @@ fn main() {
     // test_heun_stokes();
     // test_heun_ohne_stokes();
     // test_heun_stokes_massen();
-    // test_optimized();
-
-    assert_eq!(add_sub(5,2,0), (7,0,0,0,0));
-    assert_eq!(add_sub(2,5,1), (4294967293,0,1,1,1));
-    assert_eq!(scale(5), 5);
-    assert_eq!(scale(u32::MAX as u64), u32::MAX);
-    assert_eq!(scale(u64::MAX), u32::MAX);
-    assert_eq!(scale((u32::MAX as u64)+1), 0);
-    assert_eq!(my_shift(1, 0), 2);
-    assert_eq!(my_shift(2, 1), 1);
-    assert_eq!(my_shift(1, 1), 0);
-    assert_eq!(my_shift(u32::MAX, 0), u32::MAX - 1);
-    assert_eq!(my_shift(u32::MAX, 1), u32::MAX - 2147483648);
-    assert_eq!(mult(3, 5), 15);
-    // assert_eq!(mult(u32::MAX, u32::MAX), u64::MAX); // Müsste das nicht gleich sein?
+    test_optimized();
 }
 
 fn test_optimized(){
     // Erster Test ist der simpelste Mögliche Wurf:
     // Pos 0,0; Vel 100,100; radius 1; mass 1; delta_t 1
-    // TODO aufrufen
-    optimizedheunstokes::get_list(0, 0, 100, 100, 1, 1, 1);
+    // optimizedheunstokes::get_list(0, 0, 100, 100, 1, 1, 1);
+
+    let numbers = optimizedheunstokes::no_negatives(0,0,
+                                                    0b0000_0000_0110_0100_0000_0000_0000,
+                                                    0b0000_0000_0110_0100_0000_0000_0000,
+                                                    0b0000_0000_0000_0001_0000_0000_0000_0000,
+                                                    0b0000_0000_0000_0001_0000_0000_0000_0000,
+                                                    0b0000_0000_0000_0001_0000_0000_0000_0000);
+    fileprinter::write_to_file_32("First_Optimized.txt", numbers);
 
     // Zweiter Test verändert nur delta_t was zu mehr genauigkeit führen sollte:
     // Pos 0,0; Vel 100,100; radius 1; mass 1; delta_t 0.1

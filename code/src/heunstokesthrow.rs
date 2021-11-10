@@ -29,6 +29,8 @@ pub fn get_list(position: (f64, f64), velocity: (f64, f64), radius: f64, delta_t
         // Calculate next position with median of the speeds
         let newrx = rx + (vx + next_vx)/2.0 * dt;
         let newry = ry + (vy + next_vy)/2.0 * dt;
+        // let newry = ry + (vy - v_y_start + next_vy - v_y_start)/2.0 * dt;
+        // let newry = ry + (vy - v_y_start + next_vy - v_y_start)/2.0 * dt * v_y_start;
         // Assign new values
         t += dt;
         rx = newrx;
