@@ -64,13 +64,17 @@ pub fn get_list(pos_x: u32, pos_y: u32, vel_x: u32, vel_y: u32, radius: u32, mas
         let acc_x_scaled = scale(acc_x); // 7 cycles
         let vel_x = mult(acc_x_scaled, dt); // 8 cycles
         let vel_x_scaled = scale(vel_x); // 8 cycles
-        let next_vx = add_sub(vx, vel_x_scaled, 1).0; // 9 cycles
+        // Add sub immer als Tuple und dann die wichtigen Sachen rausübernehmen
+        let sum1 = add_sub(vx, vel_x_scaled, 1); // 9 cycles
+        let next_vx = sum1.0;
         // let newrx = rx + (vx + next_vx)/2.0 * dt;  wird zu:
-        let newrx_added = add_sub(vx, next_vx, 0).0; // 10 cycles
-        let newrx_halfed = my_shift(newrx_added, 1); // 11 cycles
+        let sum2 = add_sub(vx, next_vx, sum1.4); // 10 cycles
+        let newrx_added = sum2.0;
+        let newrx_halfed = my_shift(newrx_added.0, 1); // 11 cycles
         let newrx_timed = mult(newrx_halfed, dt); // 12 cycles
         let newrx_timed_scaled = scale(newrx_timed); // 12 cycles
-        let newrx = add_sub(rx, newrx_timed_scaled, 0).0; // 13 cycles
+        let sum3 = add_sub(rx, newrx_timed_scaled, sum2.4); // 13 cycles
+        let newrx = sum3.0;
         // TODO Bei add_sub die anderen flags noch verarbeiten
         // TODO: newrx sinnvoll speicher
         rx = newrx;
