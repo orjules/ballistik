@@ -7,6 +7,7 @@ mod simpleheun;
 mod heunstokesthrow;
 mod optimizedheunstokes;
 mod fixedpoint;
+mod floats;
 
 fn main() {
     // initial_tests();
