@@ -1,0 +1,7 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Aufgabenstellung}{3}{}%
+\contentsline {section}{\numberline {2}Programmablauf}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Initiale Version}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Verbesserte Version}{5}{}%
+\contentsline {section}{\numberline {3}Datenpfadarchitektur}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Datenflussgraph}{7}{}%

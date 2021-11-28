@@ -19,9 +19,16 @@ fn main() {
     // test_heun_ohne_stokes();
     // test_heun_stokes_massen();
     // test_optimized();
-    fixedpoint::test_alu();
+    // fixedpoint::test_alu();
+    test_final();
 }
 
+fn test_final(){
+    let data = floats::get_list((0.0,0.0), (1000.0,1000.0), 1.0, 5.0, 1.0);
+    fileprinter::write_to_file("finalplot.txt", data);
+}
+
+#[allow(dead_code)]
 fn test_optimized(){
     // Erster Test ist der simpelste Mögliche Wurf:
     // Pos 0,0; Vel 100,100; radius 1; mass 1; delta_t 1
