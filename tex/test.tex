@@ -1,4 +1,4 @@
-\documentclass{artilcle}
+\documentclass{article}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[ngerman]{babel}
@@ -252,21 +252,36 @@
 
     \subsection{Datenflussgraph}
 
-    Der DFG ...
+    Der DFG ist in aufgrund seiner Länge auf zwei Seiten verteilt.
+    Die erste Seite (Abbildung \ref{DFG1}), zeigt alles vor Anfang des Loops,
+    die zweite (Abbildung \ref{DFG2}) alles im Loop.
 
-    %% Grobe DFG
-    %% DFG mit Sheduling (mind 2 Varianten)
+    \begin{figure}
+        \includegraphics[width=\textwidth]{../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S1.png}
+        \caption{Datenflussgraph vor dem Loop}
+        \label{DFG1}
+    \end{figure}
+
+    \begin{figure}
+        \includegraphics[width=\textwidth]{../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S2.png}
+        \caption{Datenflussgraph im Loop}
+        \label{DFG2}
+    \end{figure}
+
+    \newpage
     
     \subsection{Register-Transfer-Folge}
 
     Diese erste Version der RT-Folge besteht aus LOAD, PREP, LOOP, FULL und END.
-    Bei LOAD werden am Anfang die nötigen Daten aus dem Speicher geladen.
-    PREP bezeichnet die Takte nach dem Lade aber vor dem Beginn des Loop.
-    LOOP meint den Anfang des Loops, wenn die Pipeline noch nicht voll gelaufen ist.
-    FULL sind zwei abwechselnde States, bei denen die Pipeline schon voll gelaufen ist.
-    END ist ein simpler Endzustand.
+    \begin{itemize}
+        \item LOAD lädt am Anfang die nötigen Daten aus dem Speicher.
+        \item PREP bezeichnet die Takte nach dem Lade aber vor dem Beginn des Loop.
+        \item LOOP meint den Anfang des Loops, wenn die Pipeline noch nicht voll gelaufen ist.
+        \item FULL sind zwei abwechselnde States, bei denen die Pipeline schon voll gelaufen ist.
+        \item END ist ein simpler Endzustand.
+    \end{itemize}
 
-    \begin{figure}[!htbp]
+    \begin{figure}
         \includegraphics[width=\textwidth]{../Diagramme/RegisterTransferfolge/RegisterTransferFolgeKomplett.png}
         \caption{Register-Transfer-Folge}
         \label{RT-Folge}

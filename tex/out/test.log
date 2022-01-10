@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  10 JAN 2022 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  10 JAN 2022 17:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,11 +6,7 @@ entering extended mode
 **test.tex
 (./test.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (./artilcle.cls
-
-LaTeX Warning: You have requested document class `artilcle',
-               but the document class provides `article'.
-
+L3 programming layer <2021-02-18> (./article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
 (/usr/local/texlive/2021basic/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
@@ -289,44 +285,69 @@ File: ../Ballistiken/PlotExports/Optimiert.png Graphic file (type png)
 Package pdftex.def Info: ../Ballistiken/PlotExports/Optimiert.png  used on inpu
 t line 242.
 (pdftex.def)             Requested size: 345.0pt x 235.7841pt.
-<../Diagramme/RegisterTransferfolge/RegisterTransferFolgeKomplett.png, id=38, 5
+<../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S1.png, id=38, 614.295pt x 80
+7.015pt>
+File: ../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S1.png Graphic file (typ
+e png)
+<use ../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S1.png>
+Package pdftex.def Info: ../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S1.pn
+g  used on input line 260.
+(pdftex.def)             Requested size: 345.0pt x 453.24292pt.
+<../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S2.png, id=39, 614.295pt x 80
+7.015pt>
+File: ../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S2.png Graphic file (typ
+e png)
+<use ../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S2.png>
+Package pdftex.def Info: ../Diagramme/Datenflussdiagramm/DFG_VorerstFinal_S2.pn
+g  used on input line 266.
+(pdftex.def)             Requested size: 345.0pt x 453.24292pt.
+ [7 <../Ballistiken/PlotExports/Optimiert.png>] [8 <../Diagramme/Datenflussdiag
+ramm/DFG_VorerstFinal_S1.png>] [9 <../Diagramme/Datenflussdiagramm/DFG_VorerstF
+inal_S2.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+77.
+ (/usr/local/texlive/2021basic/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<../Diagramme/RegisterTransferfolge/RegisterTransferFolgeKomplett.png, id=50, 5
 97.6729pt x 845.0772pt>
 File: ../Diagramme/RegisterTransferfolge/RegisterTransferFolgeKomplett.png Grap
 hic file (type png)
 <use ../Diagramme/RegisterTransferfolge/RegisterTransferFolgeKomplett.png>
 Package pdftex.def Info: ../Diagramme/RegisterTransferfolge/RegisterTransferFol
-geKomplett.png  used on input line 270.
+geKomplett.png  used on input line 285.
 (pdftex.def)             Requested size: 345.0pt x 487.81116pt.
- [7 <../Ballistiken/PlotExports/Optimiert.png>] [8 <../Diagramme/RegisterTransf
-erfolge/RegisterTransferFolgeKomplett.png>]
+ [10]
+[11 <../Diagramme/RegisterTransferfolge/RegisterTransferFolgeKomplett.png>]
 (/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/tex/out/test.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5677 strings out of 480445
- 78556 string characters out of 5892390
- 1014715 words of memory out of 5000000
- 22894 multiletter control sequences out of 15000+600000
- 459604 words of font info for 60 fonts, out of 8000000 for 9000
+ 5724 strings out of 480445
+ 80076 string characters out of 5892390
+ 1014734 words of memory out of 5000000
+ 22934 multiletter control sequences out of 15000+600000
+ 459969 words of font info for 61 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  68i,6n,74p,7887b,2274s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/l
-ocal/texlive/2021basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/
-texlive/2021basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texli
-ve/2021basic/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/202
-1basic/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021basic
-/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2021basic/texmf
--dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021basic/texmf-dist/
-fonts/type1/public/lm/lmr5.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/t
-ype1/public/lm/lmr9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/pu
-blic/lm/lmtt8.pfb>
+{/usr/local/texlive/2021basic/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/
+local/texlive/2021basic/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/tex
+live/2021basic/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/
+2021basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2021b
+asic/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2021basic/t
+exmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2021basic/texmf-d
+ist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2021basic/texmf-dist/fo
+nts/type1/public/lm/lmr17.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/ty
+pe1/public/lm/lmr5.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/pub
+lic/lm/lmr9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/lm/
+lmtt8.pfb>
 Output written on "/Users/julius/SynologyDrive/Uni/Semester 5/SSE/ballistik/tex
-/out/test.pdf" (9 pages, 1174092 bytes).
+/out/test.pdf" (12 pages, 1315147 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
