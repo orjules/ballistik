@@ -256,5 +256,21 @@
 
     %% Grobe DFG
     %% DFG mit Sheduling (mind 2 Varianten)
+    
+    \subsection{Register-Transfer-Folge}
+
+    Diese erste Version der RT-Folge besteht aus LOAD, PREP, LOOP, FULL und END.
+    Bei LOAD werden am Anfang die nötigen Daten aus dem Speicher geladen.
+    PREP bezeichnet die Takte nach dem Lade aber vor dem Beginn des Loop.
+    LOOP meint den Anfang des Loops, wenn die Pipeline noch nicht voll gelaufen ist.
+    FULL sind zwei abwechselnde States, bei denen die Pipeline schon voll gelaufen ist.
+    END ist ein simpler Endzustand.
+
+    \begin{figure}[!htbp]
+        \includegraphics[width=\textwidth]{../Diagramme/RegisterTransferfolge/RegisterTransferFolgeKomplett.png}
+        \caption{Register-Transfer-Folge}
+        \label{RT-Folge}
+    \end{figure}
+
 
 \end{document}

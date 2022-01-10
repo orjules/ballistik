@@ -1,5 +1,0 @@
-=begin
-@startuml
-testdot
-@enduml
-=end

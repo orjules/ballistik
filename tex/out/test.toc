@@ -5,3 +5,4 @@
 \contentsline {subsection}{\numberline {2.2}Verbesserte Version}{5}{}%
 \contentsline {section}{\numberline {3}Datenpfadarchitektur}{7}{}%
 \contentsline {subsection}{\numberline {3.1}Datenflussgraph}{7}{}%
+\contentsline {subsection}{\numberline {3.2}Register-Transfer-Folge}{7}{}%
